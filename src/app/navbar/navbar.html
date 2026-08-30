@@ -4,35 +4,14 @@
     Abdul Ali
   </a>
 
-  <!-- MOBILE MENU BUTTON -->
-
   <button
     class="menu-toggle"
     type="button"
     (click)="menuOpen = !menuOpen"
     [class.open]="menuOpen"
-    aria-label="Toggle navigation"
   >
     <span></span>
     <span></span>
   </button>
 
-
-  <!-- NAVIGATION LINKS -->
-
-  <div
-    class="links"
-    [class.mobile-open]="menuOpen"
-  >
-
-    <a href="#home" (click)="menuOpen = false">Home</a>
-    <a href="#about" (click)="menuOpen = false">About</a>
-    <a href="#skills" (click)="menuOpen = false">Skills</a>
-    <a href="#projects" (click)="menuOpen = false">Projects</a>
-    <a href="#experience" (click)="menuOpen = false">Experience</a>
-    <a href="#achievements" (click)="menuOpen = false">Achievements</a>
-    <a href="#contact" (click)="menuOpen = false">Contact</a>
-
-  </div>
-
-</nav>
+  <div class="links" [class.mobile-open]="menuOpen">
