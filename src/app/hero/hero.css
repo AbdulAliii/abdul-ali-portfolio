@@ -518,3 +518,37 @@ button.secondary:hover {
   }
 
 }
+@media (max-width: 700px) {
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-content {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero h1 {
+    font-size: clamp(70px, 20vw, 120px);
+    line-height: 0.9;
+    word-break: normal;
+  }
+
+  .hero .description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+
+}

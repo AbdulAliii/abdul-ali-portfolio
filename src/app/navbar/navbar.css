@@ -156,3 +156,183 @@ html {
   }
 
 }
+/* ============================= */
+/* MOBILE NAVIGATION */
+/* ============================= */
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+  nav {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background: rgba(5, 5, 5, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+  }
+
+
+  /* LOGO */
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+
+  /* HAMBURGER */
+
+  .menu-toggle {
+
+    display: flex;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid #333;
+
+    background: transparent;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    cursor: pointer;
+  }
+
+
+  .menu-toggle span {
+
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    background: white;
+
+    transition: 0.3s ease;
+  }
+
+
+  /* HAMBURGER → X */
+
+  .menu-toggle.open span:first-child {
+
+    transform: translateY(3.5px) rotate(45deg);
+
+  }
+
+  .menu-toggle.open span:last-child {
+
+    transform: translateY(-3.5px) rotate(-45deg);
+
+  }
+
+
+  /* MOBILE LINKS */
+
+  .links {
+
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 10px 6% 20px;
+
+    background: rgba(5, 5, 5, 0.98);
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+
+  .links.mobile-open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+  }
+
+
+  .links a {
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #222;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+  }
+
+
+  .links a:last-child {
+
+    border-bottom: none;
+
+  }
+
+
+  .links a:hover {
+
+    color: #00e5ff;
+
+  }
+
+
+  /* IMPORTANT:
+     Do NOT let hidden navbar leave layout problems */
+
+  nav.nav-hidden {
+
+    transform: translateY(-100%);
+
+  }
+
+}

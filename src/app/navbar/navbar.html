@@ -1,18 +1,37 @@
 <nav [class.nav-hidden]="isHidden">
 
-  <a href="/" class="logo">
-  Abdul Ali
-</a>
+  <a href="#home" class="logo">
+    Abdul Ali
+  </a>
 
-  <div class="links">
+  <!-- MOBILE MENU BUTTON -->
 
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
+  <button
+    class="menu-toggle"
+    type="button"
+    (click)="menuOpen = !menuOpen"
+    [class.open]="menuOpen"
+    aria-label="Toggle navigation"
+  >
+    <span></span>
+    <span></span>
+  </button>
+
+
+  <!-- NAVIGATION LINKS -->
+
+  <div
+    class="links"
+    [class.mobile-open]="menuOpen"
+  >
+
+    <a href="#home" (click)="menuOpen = false">Home</a>
+    <a href="#about" (click)="menuOpen = false">About</a>
+    <a href="#skills" (click)="menuOpen = false">Skills</a>
+    <a href="#projects" (click)="menuOpen = false">Projects</a>
+    <a href="#experience" (click)="menuOpen = false">Experience</a>
+    <a href="#achievements" (click)="menuOpen = false">Achievements</a>
+    <a href="#contact" (click)="menuOpen = false">Contact</a>
 
   </div>
 
