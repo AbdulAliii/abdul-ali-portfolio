@@ -280,7 +280,39 @@ button.secondary:hover {
 
   box-shadow: none;
 }
+.hero-buttons a.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
 
+  border: 1px solid #555;
+  background: transparent;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-buttons a.secondary:hover {
+  transform: translateY(-3px);
+  border-color: #00e5ff;
+  color: #00e5ff;
+}
+
+.hero-buttons a.secondary span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.hero-buttons a.secondary:hover span {
+  transform: translateY(3px);
+}
 
 /* =========================================
    SIDE INFO
