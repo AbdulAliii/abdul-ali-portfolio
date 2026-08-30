@@ -9,9 +9,25 @@
     type="button"
     (click)="menuOpen = !menuOpen"
     [class.open]="menuOpen"
+    aria-label="Toggle navigation menu"
   >
     <span></span>
     <span></span>
   </button>
 
-  <div class="links" [class.mobile-open]="menuOpen">
+  <div
+    class="links"
+    [class.mobile-open]="menuOpen"
+  >
+
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+
+  </div>
+
+</nav>
