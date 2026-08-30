@@ -1,0 +1,488 @@
+.hero {
+  min-height: calc(100vh - 80px);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 8%;
+
+  background: #0a0a0a;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.hero-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CYAN GLOW
+========================================= */
+
+.hero-glow {
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  right: -200px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: #00e5ff;
+
+  opacity: 0.055;
+
+  filter: blur(140px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TOP META
+========================================= */
+
+.hero-meta {
+  position: absolute;
+
+  top: 35px;
+  left: 8%;
+  right: 8%;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #555;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1000px;
+
+  animation: heroEnter 1s ease forwards;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+  margin: 0 0 12px;
+
+  color: #00e5ff;
+
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+h1 {
+  margin: 0;
+
+  font-size: clamp(90px, 12vw, 170px);
+
+  line-height: 0.82;
+
+  font-weight: 900;
+
+  letter-spacing: -8px;
+}
+
+h1 span {
+  color: transparent;
+
+  -webkit-text-stroke: 2px #ffffff;
+
+  transition:
+    color 0.4s ease,
+    -webkit-text-stroke 0.4s ease;
+}
+
+h1:hover span {
+  color: #00e5ff;
+
+  -webkit-text-stroke: 2px #00e5ff;
+}
+
+
+/* =========================================
+   ROLE
+========================================= */
+
+.role {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.role .line {
+  width: 50px;
+
+  height: 1px;
+
+  background: #00e5ff;
+}
+
+.role p {
+  margin: 0;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: #999;
+}
+
+.role p span {
+  color: #00e5ff;
+
+  margin: 0 5px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  max-width: 620px;
+
+  margin: 25px 0 0;
+
+  color: #888;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+button {
+  padding: 15px 27px;
+
+  border: none;
+
+  background: #00e5ff;
+
+  color: #000;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+button span {
+  margin-left: 12px;
+
+  font-size: 16px;
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 229, 255, 0.2);
+}
+
+button.secondary {
+  background: transparent;
+
+  color: white;
+
+  border: 1px solid #444;
+}
+
+button.secondary:hover {
+  border-color: #00e5ff;
+
+  color: #00e5ff;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   SIDE INFO
+========================================= */
+
+.hero-side {
+  position: absolute;
+
+  right: 35px;
+
+  bottom: 100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  writing-mode: vertical-rl;
+
+  color: #444;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 35px;
+
+  left: 8%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #555;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.scroll-line {
+  width: 60px;
+
+  height: 1px;
+
+  background: #333;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+
+  position: absolute;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: #00e5ff;
+
+  animation: scrollLine 2s infinite;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroEnter {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes scrollLine {
+
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .hero-meta {
+    left: 6%;
+    right: 6%;
+  }
+
+  h1 {
+    font-size: 100px;
+
+    letter-spacing: -5px;
+  }
+
+  .hero-side {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: calc(100vh - 120px);
+
+    padding: 70px 25px 100px;
+  }
+
+  .hero-meta {
+    top: 25px;
+
+    left: 25px;
+    right: 25px;
+  }
+
+  h1 {
+    font-size: 68px;
+
+    letter-spacing: -4px;
+  }
+
+  h1 span {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .role {
+    margin-top: 28px;
+  }
+
+  .role p {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .scroll-indicator {
+    left: 25px;
+    bottom: 25px;
+  }
+
+}

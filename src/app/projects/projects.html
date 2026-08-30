@@ -1,0 +1,133 @@
+<section class="projects" id="projects">
+
+  <div class="projects-top">
+
+    <div class="section-label">
+      <span>05</span>
+      <p>SELECTED WORK</p>
+    </div>
+
+    <div class="section-line"></div>
+
+    <span class="projects-status">
+      PROJECTS / 2025—2026
+    </span>
+
+  </div>
+
+
+  <div class="section-heading">
+
+    <h2>
+      Projects I've built
+      <span>and explored.</span>
+    </h2>
+
+    <p class="heading-description">
+      A collection of software, AI, IoT and robotics projects
+      built through experimentation, learning and real-world problem solving.
+    </p>
+
+  </div>
+
+
+  <!-- FILTERS -->
+
+  <div class="filters">
+
+    @for (category of categories; track category) {
+
+      <button
+        [class.active]="selectedCategory === category"
+        (click)="selectedCategory = category"
+      >
+        {{ category }}
+      </button>
+
+    }
+
+  </div>
+
+
+  <!-- PROJECT GRID -->
+
+  <div class="projects-grid">
+
+    @for (project of filteredProjects; track project.number) {
+
+      <article
+        class="project-card"
+        [class.featured]="project.number === '01'"
+      >
+
+        <div class="project-header">
+
+          <span class="project-number">
+            {{ project.number }}
+          </span>
+
+          <span class="project-index">
+            PROJECT
+          </span>
+
+        </div>
+
+
+        <div class="project-content">
+
+          <p class="category">
+            {{ project.category }}
+          </p>
+
+          <h3>
+            {{ project.title }}
+          </h3>
+
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+
+
+          <div class="technologies">
+
+            @for (technology of project.technologies; track technology) {
+
+              <span>
+                {{ technology }}
+              </span>
+
+            }
+
+          </div>
+
+
+          <button class="explore-button">
+            Explore Project
+            <span>↗</span>
+          </button>
+
+        </div>
+
+
+        <div class="project-corner">
+          {{ project.number }}
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+
+  <div class="projects-footer">
+
+    <span>05</span>
+
+    <div></div>
+
+    <span>{{ filteredProjects.length }} PROJECTS DISPLAYED</span>
+
+  </div>
+
+</section>

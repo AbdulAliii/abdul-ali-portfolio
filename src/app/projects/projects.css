@@ -1,0 +1,558 @@
+.projects {
+  position: relative;
+
+  padding: 130px 8%;
+
+  background: #101010;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.projects-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 55px;
+}
+
+.section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.section-label span {
+  color: #555;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+.section-label p {
+  margin: 0;
+
+  color: #00e5ff;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+.section-line {
+  height: 1px;
+
+  flex: 1;
+
+  background: #292929;
+}
+
+.projects-status {
+  color: #555;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.section-heading {
+  max-width: 1000px;
+
+  margin-bottom: 65px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px white;
+
+  cursor: pointer;
+
+  transition:
+    color 0.4s ease,
+    -webkit-text-stroke 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.section-heading h2 span:hover {
+  color: #00e5ff;
+
+  -webkit-text-stroke: 1.5px #00e5ff;
+
+  text-shadow:
+    0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.heading-description {
+  max-width: 650px;
+
+  margin-top: 30px;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.filters {
+  max-width: 1250px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.filters button {
+  padding: 9px 16px;
+
+  border: 1px solid #292929;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.filters button:hover {
+  color: white;
+
+  border-color: #00e5ff;
+}
+
+.filters button.active {
+  background: #00e5ff;
+
+  border-color: #00e5ff;
+
+  color: #000;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+  position: relative;
+
+  min-height: 410px;
+
+  padding: 28px;
+
+  background: #0a0a0a;
+
+  border: 1px solid #252525;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #00e5ff;
+
+  background: #0d0d0d;
+}
+
+
+/* FEATURED PROJECT */
+
+.project-card.featured {
+  grid-column: span 2;
+
+  min-height: 460px;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.project-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.project-number {
+  color: #00e5ff;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.project-index {
+  color: #444;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+========================================= */
+
+.project-content {
+  max-width: 720px;
+
+  margin-top: 70px;
+}
+
+.category {
+  margin: 0 0 15px;
+
+  color: #666;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+.project-content h3 {
+  margin: 0 0 20px;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+.project-description {
+  max-width: 650px;
+
+  margin: 0 0 28px;
+
+  color: #999;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* FEATURED TITLE */
+
+.project-card.featured .project-content h3 {
+  font-size: 42px;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 30px;
+}
+
+.technologies span {
+  padding: 7px 11px;
+
+  border: 1px solid #292929;
+
+  color: #777;
+
+  font-size: 11px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.technologies span:hover {
+  color: #00e5ff;
+
+  border-color: #00e5ff;
+
+  background: rgba(0, 229, 255, 0.04);
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.explore-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #333;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.explore-button span {
+  color: #666;
+
+  font-size: 16px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.explore-button:hover {
+  border-color: #00e5ff;
+
+  color: #00e5ff;
+
+  gap: 20px;
+}
+
+.explore-button:hover span {
+  color: #00e5ff;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   CORNER NUMBER
+========================================= */
+
+.project-corner {
+  position: absolute;
+
+  right: -15px;
+
+  bottom: -35px;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px #1d1d1d;
+
+  font-size: 130px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  pointer-events: none;
+
+  transition:
+    -webkit-text-stroke 0.4s ease;
+}
+
+.project-card:hover .project-corner {
+  -webkit-text-stroke: 1px #252525;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.projects-footer {
+  max-width: 1250px;
+
+  margin: 55px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: #444;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.projects-footer div {
+  height: 1px;
+
+  flex: 1;
+
+  background: #252525;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .projects {
+    padding: 100px 6%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.featured {
+    grid-column: span 1;
+  }
+
+  .project-card.featured .project-content h3 {
+    font-size: 36px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .projects {
+    padding: 90px 25px;
+  }
+
+  .projects-top {
+    gap: 15px;
+  }
+
+  .projects-status {
+    display: none;
+  }
+
+  .section-heading h2 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .filters {
+    margin-bottom: 25px;
+  }
+
+  .filters button {
+    padding: 8px 12px;
+
+    font-size: 9px;
+  }
+
+  .project-card,
+  .project-card.featured {
+    min-height: 380px;
+
+    padding: 23px;
+  }
+
+  .project-content,
+  .project-card.featured .project-content {
+    margin-top: 55px;
+  }
+
+  .project-content h3,
+  .project-card.featured .project-content h3 {
+    font-size: 27px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-corner {
+    font-size: 90px;
+  }
+
+}

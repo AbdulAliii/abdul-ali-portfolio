@@ -1,0 +1,83 @@
+<section class="achievements" id="achievements">
+
+  <div class="achievements-top">
+
+    <div class="section-label">
+      <span>07</span>
+      <p>ACHIEVEMENTS</p>
+    </div>
+
+    <div class="section-line"></div>
+
+    <span class="achievements-status">
+      MILESTONES / HIGHLIGHTS
+    </span>
+
+  </div>
+
+
+  <div class="section-heading">
+
+    <h2>
+      Milestones that
+      <span>shaped my journey.</span>
+    </h2>
+
+    <p class="heading-description">
+      Competitions, recognition and experiences that pushed me
+      beyond the classroom and into real-world problem solving.
+    </p>
+
+  </div>
+
+
+  <div class="achievements-list">
+
+    @for (achievement of achievements; track achievement.number) {
+
+      <article class="achievement-card">
+
+        <div class="achievement-number">
+          {{ achievement.number }}
+        </div>
+
+
+        <div class="achievement-content">
+
+          <p class="achievement-category">
+            {{ achievement.category }}
+          </p>
+
+          <h3>
+            {{ achievement.title }}
+          </h3>
+
+          <p class="achievement-description">
+            {{ achievement.description }}
+          </p>
+
+        </div>
+
+
+        <div class="achievement-arrow">
+          ↗
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+
+  <div class="achievements-footer">
+
+    <span>07</span>
+
+    <div></div>
+
+    <span>ACHIEVEMENT LOG</span>
+
+  </div>
+
+</section>

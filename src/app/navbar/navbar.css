@@ -1,0 +1,149 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+
+  background: #0a0a0a;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid #1f1f1f;
+}
+
+
+/* LOGO */
+
+.logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  font-size: 28px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.logo:hover {
+  color: #00e5ff;
+
+  letter-spacing: 3px;
+
+  transform: skewX(-4deg);
+}
+
+
+/* NAVIGATION */
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.links a {
+  position: relative;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: color 0.3s ease;
+}
+
+
+/* UNDERLINE ANIMATION */
+
+.links a::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #00e5ff;
+
+  transition: width 0.3s ease;
+}
+
+.links a:hover {
+  color: #00e5ff;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+
+/* SMOOTH SECTION JUMP */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 18px 30px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+
+  .links a {
+    font-size: 14px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  nav {
+    padding: 18px 20px;
+
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    font-size: 13px;
+  }
+
+}

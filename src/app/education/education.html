@@ -1,0 +1,86 @@
+<section class="education" id="education">
+
+  <div class="education-top">
+
+    <div class="section-label">
+      <span>06</span>
+      <p>EDUCATION</p>
+    </div>
+
+    <div class="section-line"></div>
+
+    <span class="education-status">
+      ACADEMIC / FOUNDATION
+    </span>
+
+  </div>
+
+
+  <div class="section-heading">
+
+    <h2>
+      Academic foundation
+      <span>and continuous learning.</span>
+    </h2>
+
+    <p class="heading-description">
+      The academic journey behind my interest in software,
+      artificial intelligence, embedded systems and engineering.
+    </p>
+
+  </div>
+
+
+  <div class="education-list">
+
+    @for (item of education; track item.period) {
+
+      <article class="education-card">
+
+        <div class="education-period">
+          <span>{{ item.period }}</span>
+        </div>
+
+
+        <div class="education-content">
+
+          <div class="education-number">
+            {{ $index + 1 | number:'2.0' }}
+          </div>
+
+          <p class="education-degree">
+            {{ item.degree }}
+          </p>
+
+          <h3>
+            {{ item.field }}
+          </h3>
+
+          <p class="education-institution">
+            {{ item.institution }}
+          </p>
+
+          <span class="education-result">
+            {{ item.result }}
+          </span>
+
+        </div>
+
+      </article>
+
+    }
+
+  </div>
+
+
+  <div class="education-footer">
+
+    <span>06</span>
+
+    <div></div>
+
+    <span>ACADEMIC JOURNEY</span>
+
+  </div>
+
+</section>

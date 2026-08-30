@@ -1,0 +1,378 @@
+.achievements {
+  position: relative;
+
+  padding: 130px 8%;
+
+  background: #050505;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.achievements-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 55px;
+}
+
+.section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.section-label span {
+  color: #555;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+.section-label p {
+  margin: 0;
+
+  color: #00e5ff;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+.section-line {
+  height: 1px;
+
+  flex: 1;
+
+  background: #292929;
+}
+
+.achievements-status {
+  color: #555;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.section-heading {
+  max-width: 1050px;
+
+  margin-bottom: 80px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px white;
+
+  transition:
+    color 0.4s ease,
+    -webkit-text-stroke 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+.section-heading h2 span:hover {
+  color: #00e5ff;
+
+  -webkit-text-stroke: 1.5px #00e5ff;
+
+  text-shadow:
+    0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.heading-description {
+  max-width: 650px;
+
+  margin-top: 30px;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ACHIEVEMENT LIST
+========================================= */
+
+.achievements-list {
+  max-width: 1250px;
+
+  margin: auto;
+}
+
+
+/* =========================================
+   ACHIEVEMENT CARD
+========================================= */
+
+.achievement-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr 60px;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 38px 0;
+
+  border-top: 1px solid #292929;
+
+  transition:
+    padding 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.achievement-card:last-child {
+  border-bottom: 1px solid #292929;
+}
+
+.achievement-card:hover {
+  padding-left: 20px;
+
+  border-color: #00e5ff;
+
+  background: rgba(0, 229, 255, 0.01);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.achievement-number {
+  color: #444;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.achievement-card:hover .achievement-number {
+  color: #00e5ff;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.achievement-content {
+  max-width: 850px;
+}
+
+.achievement-category {
+  margin: 0 0 10px;
+
+  color: #00e5ff;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+.achievement-content h3 {
+  margin: 0 0 14px;
+
+  color: white;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+.achievement-description {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #888;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.achievement-arrow {
+  color: #444;
+
+  font-size: 28px;
+
+  text-align: right;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-arrow {
+  color: #00e5ff;
+
+  transform: translate(5px, -5px);
+}
+
+
+/* =========================================
+   FEATURE EFFECT
+========================================= */
+
+.achievement-card:first-child .achievement-number {
+  color: #00e5ff;
+}
+
+.achievement-card:first-child .achievement-content h3 {
+  font-size: 34px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.achievements-footer {
+  max-width: 1250px;
+
+  margin: 50px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: #444;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.achievements-footer div {
+  height: 1px;
+
+  flex: 1;
+
+  background: #252525;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .achievements {
+    padding: 100px 6%;
+  }
+
+  .achievement-card {
+    grid-template-columns: 70px 1fr 40px;
+
+    gap: 25px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .achievements {
+    padding: 90px 25px;
+  }
+
+  .achievements-top {
+    gap: 15px;
+  }
+
+  .achievements-status {
+    display: none;
+  }
+
+  .section-heading h2 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+  .achievement-card {
+    grid-template-columns: 45px 1fr;
+
+    gap: 18px;
+
+    padding: 30px 0;
+  }
+
+  .achievement-card:hover {
+    padding-left: 0;
+  }
+
+  .achievement-arrow {
+    display: none;
+  }
+
+  .achievement-content h3,
+  .achievement-card:first-child .achievement-content h3 {
+    font-size: 24px;
+  }
+
+  .achievement-description {
+    font-size: 14px;
+  }
+
+  .achievement-number {
+    font-size: 11px;
+  }
+
+}
