@@ -12,7 +12,7 @@ export class Navbar {
   isHidden = false;
   lastScrollPosition = 0;
 
-  @HostListener('window:scroll', [])
+  @HostListener('document:scroll', [])
   onWindowScroll() {
 
     const currentScrollPosition = window.scrollY;
