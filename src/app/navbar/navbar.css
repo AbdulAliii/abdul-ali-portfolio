@@ -157,44 +157,68 @@ html {
 
 }
 /* ============================= */
-/* MOBILE NAVIGATION */
+/* MOBILE NAVBAR */
 /* ============================= */
 
 @media (max-width: 700px) {
 
   nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
     height: 70px;
+
     padding: 0 6%;
+
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    box-sizing: border-box;
-
-    background: rgba(5, 5, 5, 0.95);
-
-    backdrop-filter: blur(10px);
+    background: rgba(5, 5, 5, 0.97);
 
     z-index: 1000;
+
+    transition: transform 0.35s ease;
   }
 
 
   /* LOGO */
 
-  .logo {
+  nav .logo {
+
+    position: static !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
     font-size: 22px;
-    letter-spacing: 1px;
+
+    color: white;
+
+    text-decoration: none;
+
   }
 
 
   /* HAMBURGER */
 
   .menu-toggle {
+
+    position: static !important;
+
     display: flex;
 
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
 
     padding: 0;
 
@@ -211,48 +235,56 @@ html {
 
     cursor: pointer;
 
-    margin-left: auto;
   }
 
 
   .menu-toggle span {
+
     display: block;
 
-    width: 18px;
+    width: 20px;
     height: 1px;
 
     background: white;
 
     transition: 0.3s ease;
+
   }
 
 
   /* HAMBURGER → X */
 
   .menu-toggle.open span:first-child {
+
     transform: translateY(3.5px) rotate(45deg);
+
   }
 
   .menu-toggle.open span:last-child {
+
     transform: translateY(-3.5px) rotate(-45deg);
+
   }
 
 
   /* MOBILE MENU */
 
-  .links {
+  nav .links {
+
     position: absolute;
 
     top: 70px;
+
     left: 0;
     right: 0;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 0;
 
-    padding: 10px 6% 20px;
+    padding: 5px 6% 15px;
 
     background: rgba(5, 5, 5, 0.98);
 
@@ -260,6 +292,7 @@ html {
     border-bottom: 1px solid #222;
 
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(-10px);
@@ -268,18 +301,26 @@ html {
       opacity 0.3s ease,
       transform 0.3s ease,
       visibility 0.3s ease;
+
   }
 
 
-  .links.mobile-open {
+  nav .links.mobile-open {
+
     opacity: 1;
+
     visibility: visible;
+
     transform: translateY(0);
+
   }
 
 
-  .links a {
-    padding: 15px 0;
+  nav .links a {
+
+    display: block;
+
+    padding: 14px 0;
 
     border-bottom: 1px solid #222;
 
@@ -288,23 +329,30 @@ html {
     font-size: 14px;
 
     text-decoration: none;
+
   }
 
 
-  .links a:last-child {
+  nav .links a:last-child {
+
     border-bottom: none;
+
   }
 
 
-  .links a:hover {
+  nav .links a:hover {
+
     color: #00e5ff;
+
   }
 
 
-  /* HIDE NAVBAR WHILE SCROLLING DOWN */
+  /* SCROLL HIDE */
 
   nav.nav-hidden {
+
     transform: translateY(-100%);
+
   }
 
 }
